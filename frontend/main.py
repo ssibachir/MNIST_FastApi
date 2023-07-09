@@ -21,12 +21,14 @@ def classify_digit(img):
     to perform a classification on the image.
     """
     # Retrieve the URL of the backend from the environment variables
-    url_backend = os.environ["URL_BACKEND"]
+    url_backend = "http://127.0.0.1:8000"
+
     # Send a GET request to the backend with the image data as a JSON payload
     request = requests.get(url_backend, json={"image": img.tolist()})
     # Retrieve the predicted probabilities from the response
     answer = request.json()
     prob = answer["prob"]
+
     return np.array(prob)
 
 
