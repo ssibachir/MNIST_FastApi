@@ -6,7 +6,7 @@ A decoupled web application for recognizing handwritten digits using a Deep Lear
 
 The application follows a client-server architecture:
 
-![MNIST_FASTAPI](./mnist_architecture.png)
+![MNIST_FASTAPI](./MNIST_FASTAPI.png)
 
 1.  **Frontend (Streamlit):** A user-friendly interface providing a canvas for drawing digits. It converts the drawing into a pixel array and sends it to the API.
 2.  **Backend (FastAPI):** A fast, asynchronous API that receives the image data, performs preprocessing (normalization, resizing), and runs the inference.
